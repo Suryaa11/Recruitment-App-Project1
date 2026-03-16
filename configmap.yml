@@ -6,10 +6,10 @@ metadata:
 data:
   NODE_ENV: production
   PORT: "3000"
-  MONGO_URI: mongodb://rootuser:rootpassword@mongo-recruitment-service:27017/hr_system?authSource=admin
+  MONGO_URI: mongodb://rootuser:rootpassword@recruitment-mongodb-service:27017/hr_system?authSource=admin
   DB_NAME: hr_system
-  MONGO_INITDB_USERNAME: rootuser
-  MONGO_INITDB_PASSWORD: rootpassword
+  MONGO_INITDB_ROOT_USERNAME: rootuser
+  MONGO_INITDB_ROOT_PASSWORD: rootpassword
   MONGO_USERNAME: rootuser
   MONGO_PASSWORD: rootpassword
   DEFAULT_ADMIN_ID: project
