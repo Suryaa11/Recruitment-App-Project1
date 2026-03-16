@@ -17,7 +17,7 @@ spec:
       maxSurge: 25%
   template:
     metadata:
-      label:
+      labels:
         app: recruitment-temp-label
     spec:
       containers:
