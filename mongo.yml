@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recruitment-mongodb
+  namespace: surya-ns
+  labels:
+    app: recruitment-label
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recruitment-mongodb-temp-label
+  template:
+    metadata:
+      labels:
+        app: recruitment-mongodb-temp-label
+    spec:
+      containers:
+        - name: recruitment-mongodb-cont
+          image: mongo:7.0
+          ports:
+            - containerPort: 27017
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recruitment-mongodb-service
+  namespace: surya-ns
+spec:
+  selector:
+    app: recruitment-mongodb-temp-label
+  ports:
+    - port: 3001
+      targetPort: 3000
+  type: NodePort
