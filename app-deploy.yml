@@ -25,9 +25,18 @@ spec:
           image: suryaa112003/recruitment-app:v1.1.1
           ports:
             - containerPort: 3000
-          envFrom:
-            - configMapRef:
-                name: recruitment-config
+          env:
+            - name: recruitment-secret
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_URI
+                  value: url
+            - name: recruitment-config
+              valueFrom:
+                configMapKeyRef:
+                  name: PORT
+                  value: PORT
+            
 
 --- 
 apiVersion: v1
