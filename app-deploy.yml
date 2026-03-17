@@ -24,7 +24,7 @@ spec:
         - name: recruitment-cont
           image: suryaa112003/recruitment-app:v1.1.1
           ports:
-            - containerPort: 3000
+          - containerPort: 3000
           env:
           - name: recruitment-secret
             valueFrom:
