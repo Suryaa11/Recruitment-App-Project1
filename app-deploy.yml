@@ -30,12 +30,12 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: MONGO_URI
-                value: url
+                key: url
           - name: recruitment-config
             valueFrom:
               configMapKeyRef:
                 name: PORT
-                value: PORT
+                key: PORT
           
 
 --- 

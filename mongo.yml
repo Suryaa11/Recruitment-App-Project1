@@ -19,18 +19,18 @@ spec:
         - name: recruitment-mongodb-cont
           image: mongo:7.0
           ports:
-            - containerPort: 27017
+          - containerPort: 27017
           env:
           - name: recruitment-secret
             valueFrom:
               secretKeyRef:
                 name: MONGO_INITDB_ROOT_USER
-                value: username
+                key: username
           - name: recruitment-secret
             valueFrom:
               secretKeyRef:
                 name: MONGO_INITDB_ROOT_PASSWORD
-                value: password
+                key: password
 
 ---
 apiVersion: v1
