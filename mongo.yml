@@ -21,7 +21,7 @@ spec:
           ports:
           - containerPort: 27017
           env:
-          - name: MONGO_INITDB_ROOT_USER 
+          - name: MONGO_INITDB_ROOT_USER NAME
             valueFrom:
               secretKeyRef:
                 name: recruitment-secret
