@@ -26,15 +26,15 @@ spec:
           ports:
           - containerPort: 3000
           env:
-          - name: recruitment-secret
+          - name: MONGO_URI
             valueFrom:
               secretKeyRef:
-                name: MONGO_URI
+                name: recruitment-secret
                 key: url
-          - name: recruitment-config
+          - name: PORT
             valueFrom:
               configMapKeyRef:
-                name: PORT
+                name: recruitment-secret
                 key: PORT
           
 
