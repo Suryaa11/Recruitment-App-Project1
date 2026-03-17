@@ -24,12 +24,12 @@ spec:
           - name: MONGO_INITDB_ROOT_USER 
             valueFrom:
               secretKeyRef:
-                name: recruitment-secre
+                name: recruitment-secret
                 key: username
           - name: MONGO_INITDB_ROOT_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: recruitment-secre
+                name: recruitment-secret
                 key: password
 
 ---
